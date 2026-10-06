@@ -47,20 +47,23 @@ function page_header(string $title, string $active = ''): void
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo e($title); ?> - NCST Scheduling System</title>
-    <link rel="stylesheet" href="assets/app.css">
+    <link rel="stylesheet" href="assets/app.css?v=<?php echo @filemtime(__DIR__ . '/assets/app.css') ?: 1; ?>">
 </head>
 <body>
 <div class="layout">
 
     <aside class="sidebar" id="sidebar">
         <div class="brand">
-            <div class="logo-circle">NCST</div>
-            <div>
-                <h2>NCST</h2>
-                <p>NATIONAL COLLEGE OF<br>SCIENCE &amp; TECHNOLOGY</p>
-            </div>
-        </div>
-
+  
+    <img class="brand-logo" src="assets/images/ncst-logo.png" alt="NCST logo"
+         width="48" style="width:48px;height:auto;flex-shrink:0;"
+         onerror="this.hidden=true;this.nextElementSibling.hidden=false;">
+    <div class="logo-circle" hidden>NCST</div>
+    <div>
+        <h2>NCST</h2>
+        <p>NATIONAL COLLEGE OF<br>SCIENCE &amp; TECHNOLOGY</p>
+    </div>
+</div>
         <nav class="nav">
             <?php foreach (nav_items($role) as [$href, $label, $icon]): ?>
                 <a href="<?php echo e($href); ?>" class="nav-item<?php echo $href === $active ? ' active' : ''; ?>">

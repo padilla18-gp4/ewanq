@@ -84,10 +84,19 @@ small {
 
     height: 100vh;
     overflow-y: auto;
+        overflow-x: hidden;
 
     flex-shrink: 0;
+    .sidebar img {
+    max-width: 100%;
+    height: auto;
 }
-
+}
+.brand-logo {
+    width: 48px;
+    height: auto;
+    flex-shrink: 0;
+}
 .brand {
     display: flex;
     gap: 10px;

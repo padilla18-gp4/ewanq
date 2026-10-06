@@ -1,0 +1,597 @@
+/* ========================================
+   GENERAL
+======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #efbd43;
+
+    min-height: 100vh;
+
+    color: #082f57;
+
+}
+
+
+/* ========================================
+   DASHBOARD CONTAINER
+======================================== */
+
+.dashboard {
+
+    width: 92%;
+
+    max-width: 1250px;
+
+    min-height: 650px;
+
+    margin: 45px auto;
+
+    background: white;
+
+    display: flex;
+
+    border-radius: 3px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+
+    width: 210px;
+
+    background: #062d58;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 15px 12px;
+
+}
+
+
+/* ========================================
+   SCHOOL LOGO
+======================================== */
+
+.school-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 5px 5px 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+
+}
+
+
+.logo-circle {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #efbd43;
+
+    color: #062d58;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    font-size: 11px;
+
+}
+
+
+.school-logo h2 {
+
+    font-size: 17px;
+
+}
+
+
+.school-logo p {
+
+    font-size: 6px;
+
+    line-height: 1.4;
+
+    margin-top: 2px;
+
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.navigation {
+
+    margin-top: 15px;
+
+}
+
+
+.nav-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 10px 12px;
+
+    margin-bottom: 5px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+
+}
+
+
+.nav-item span {
+
+    width: 18px;
+
+    text-align: center;
+
+}
+
+
+.nav-item:hover {
+
+    background: rgba(255,255,255,0.12);
+
+}
+
+
+.nav-item.active {
+
+    background: #efbd43;
+
+    color: white;
+
+}
+
+
+/* ========================================
+   LOGOUT
+======================================== */
+
+.logout-section {
+
+    margin-top: auto;
+
+    border-top: 1px solid rgba(255,255,255,0.3);
+
+    padding-top: 12px;
+
+}
+
+
+.logout {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 12px;
+
+    padding: 10px;
+
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+.main-content {
+
+    flex: 1;
+
+    background: #ffffff;
+
+}
+
+
+/* ========================================
+   TOP BAR
+======================================== */
+
+.topbar {
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.topbar h2 {
+
+    font-size: 15px;
+
+    color: #082f57;
+
+}
+
+
+/* ========================================
+   USER MENU
+======================================== */
+
+.user-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.user-icon {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: #062d58;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 15px;
+
+}
+
+
+.user-information {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: right;
+
+}
+
+
+.user-information strong {
+
+    font-size: 10px;
+
+}
+
+
+.user-information small {
+
+    font-size: 8px;
+
+    color: #555;
+
+}
+
+
+.arrow {
+
+    font-size: 8px;
+
+}
+
+
+/* ========================================
+   WELCOME CARD
+======================================== */
+
+.welcome-card {
+
+    margin: 10px 22px;
+
+    min-height: 80px;
+
+    background: linear-gradient(
+        90deg,
+        #fff8dc,
+        #ffedb5
+    );
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 15px 20px;
+
+}
+
+
+.profile-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #083664;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+
+    margin-right: 15px;
+
+}
+
+
+.welcome-text p {
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    margin-bottom: 2px;
+
+}
+
+
+.welcome-text h2 {
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.welcome-text small {
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+}
+
+
+/* ========================================
+   STATISTICS
+======================================== */
+
+.statistics {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    padding: 5px 22px;
+
+}
+
+
+.stat-card {
+
+    min-height: 75px;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 12px;
+
+}
+
+
+.stat-number {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-right: 18px;
+
+}
+
+
+.stat-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-size: 8px;
+
+}
+
+
+.stat-text strong {
+
+    font-size: 10px;
+
+}
+
+
+.stat-text span {
+
+    margin-top: 2px;
+
+}
+
+
+/* ========================================
+   CARD COLORS
+======================================== */
+
+.stat-card.blue {
+
+    background: #e8f3ff;
+
+}
+
+
+.stat-card.green {
+
+    background: #e8f7e8;
+
+}
+
+
+.stat-card.yellow {
+
+    background: #fff5d6;
+
+}
+
+
+.stat-card.red {
+
+    background: #ffe8e8;
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .dashboard {
+
+        width: 95%;
+
+        margin: 20px auto;
+
+    }
+
+
+    .sidebar {
+
+        width: 160px;
+
+    }
+
+
+    .statistics {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard {
+
+        flex-direction: column;
+
+    }
+
+
+    .sidebar {
+
+        width: 100%;
+
+    }
+
+
+    .navigation {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .nav-item {
+
+        flex: 1;
+
+        min-width: 120px;
+
+    }
+
+
+    .statistics {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

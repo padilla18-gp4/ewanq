@@ -1,0 +1,113 @@
+/* register.css - NCST student registration */
+:root {
+    --navy: #00205b;
+    --gold: #e0a100;
+    --gold-light: #f5b800;
+    --blue: #0a6cff;
+    --text: #0b1f4d;
+    --muted: #4a5fa8;
+    --line: #e4e9f4;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+
+body {
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    background: var(--navy);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    color: var(--text);
+}
+
+.reg-card {
+    background: #fff;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 26px 44px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .3);
+}
+
+.reg-head {
+    display: grid;
+    grid-template-columns: 110px 1fr 110px;
+    align-items: center;
+    border-bottom: 3px solid var(--gold-light);
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+}
+.reg-head h1 { text-align: center; font-size: 22px; font-weight: 700; color: var(--navy); }
+.reg-logo { height: 96px; width: auto; max-width: 100px; }
+.logo-fallback {
+    width: 84px; height: 84px; border-radius: 50%;
+    background: var(--gold-light); color: var(--navy);
+    display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 20px;
+}
+
+.reg-title { text-align: center; font-size: 29px; font-weight: 700; color: var(--navy); }
+.reg-sub { text-align: center; color: var(--muted); margin: 6px 0 22px; font-size: 16px; }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 30px;
+}
+
+label.lbl { display: block; font-weight: 700; font-size: 14px; color: #1a1a1a; margin-bottom: 7px; }
+
+.field { position: relative; }
+
+.field input {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    border: 1.5px solid var(--line);
+    border-radius: 9px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--text);
+    background: #fff;
+}
+.field input::placeholder { color: #7886b5; }
+.field input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(10, 108, 255, .15); }
+.field.has-eye input { padding-right: 46px; }
+
+.eye {
+    position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+    border: 0; background: transparent; color: #7c88a6; cursor: pointer; padding: 6px; display: flex;
+}
+.eye .slash { display: none; }
+.eye.on .slash { display: block; }
+.eye:hover { color: var(--navy); }
+
+.btn-gold {
+    width: 100%; height: 50px; margin-top: 30px;
+    border: 0; border-radius: 8px;
+    background: var(--gold); color: #fff;
+    font-size: 18px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+    cursor: pointer; font-family: inherit; transition: background .15s;
+}
+.btn-gold:hover { background: #c78f00; }
+
+.login-text { text-align: center; margin-top: 16px; font-size: 15px; }
+.login-text a { color: var(--blue); text-decoration: none; margin-left: 4px; }
+.login-text a:hover { text-decoration: underline; }
+
+.alert { padding: 11px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; margin-bottom: 18px; text-align: center; }
+.alert-error { background: #ffe9e9; color: #8a1c1c; border: 1px solid #f3b9b9; }
+
+@media (max-width: 760px) {
+    body { padding: 10px; }
+    .reg-card { padding: 20px 18px 26px; }
+    .reg-head { grid-template-columns: 80px 1fr; }
+    .reg-head > :last-child { display: none; }
+    .reg-head h1 { font-size: 17px; }
+    .reg-logo { height: 70px; }
+    .logo-fallback { width: 64px; height: 64px; font-size: 16px; }
+    .reg-title { font-size: 23px; }
+    .grid { grid-template-columns: 1fr; gap: 14px; }
+}
